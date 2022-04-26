@@ -1,0 +1,22 @@
+{
+  "name": "git.log",
+  "version": "1.0.0",
+  "description": "Support count log and copy change path from GitLab/Github",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start",
+    "build": "webpack"
+  },
+  "keywords": [
+    "git"
+  ],
+  "author": "cuongphuong",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

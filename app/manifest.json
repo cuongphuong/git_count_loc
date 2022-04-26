@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "short_name": "Git count log",
+  "name": "Git count log",
+  "author": "CuongPV10",
+  "browser_action": {
+    "default_title": "Git count log"
+  },
+  "background": {
+    "scripts": [
+      "background.min.js"
+    ]
+  },
+  "content_scripts": [{
+    "matches": [
+      "https://gitlab.com/*/compare/*",
+      "https://gitlab.com/*/commit/*",
+      "https://gitlab.com/*/merge_requests/*",
+      "https://gitlab.com/search?*",
+      "https://github.com/*/*/commit/*",
+      "https://github.com/*/*/compare/*",
+      "https://github.com/*/*/pull/*",
+    ],
+    "js": [
+      "contentScript.min.js"
+    ]
+  }],
+  "icons": {
+    "512": "logo.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
